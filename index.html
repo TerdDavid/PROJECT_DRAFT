@@ -45,29 +45,34 @@
   </div>
 </nav>
 
-<div class="p-3 text-white text-center" style="background-color: indianred;">
-  <h1>Train</h1>
+<div class="p-2 text-white text-center" style="background-color: indianred;">
+  <h1>Train Tickets</h1>
   <p></p>
 </div>
         
     <div class="container">
         
         <form>
-            <label>From</label>
-                <input type="text" id="name" class="form-control" required placeholder="City or Station">
-            <label>To</label>
+            <label>LEAVING FROM</label>
+                <select class="form-control">
+                    <option></option>   
+                </select>
+                
+            <label>GOING TO</label>
                 <input type="text" id="Number" class="form-control" required placeholder="City or Station"><br>
         </form>
     </details><br>
+    </div>
 
-
+    <div class="container">
         <form>
             <label>Seat</label>
                 <select class="form-select" id="seat">
                     <option value="">1A</option>
                     <option value="">2A</option>
                     <option value="">3A</option>\
-                    <option value="">4S</select>
+                    <option value="">4S</option>
+                </select>
             <label>Choose an option</label>
                 <select class="form-select" id="choose"><br>
                     <option value="1">Regular</option>
@@ -82,6 +87,7 @@
                 </select><br>
 
             <button type="submit" class="btn btn-dark" onclick="bus()">Submit</button>
+        </div>
 
         </form>
     </details><br>
