@@ -49,10 +49,7 @@
         <a class="navbar-brand" href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Auckland_transport_train_logo.png" style="width: 40px; float: right;"></a>
         <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#">W.I.P</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">W.I.P</a>
+        <a class="nav-link" href="secondpage.html">Schedule</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">W.I.P</a>
@@ -71,8 +68,7 @@
   
             <form>
             <label>LEAVING FROM</label>
-                <select class="form-control" id="">
-                    <option value="none">City or Station</opttion>
+                <select class="form-control" id="From">
                     <option value="0">Quezon Ave</option>
                     <option value="0">GMA Kamuning</option>      
                     <option value="3">Araneta - Cubao</option>   
@@ -81,31 +77,31 @@
                 </select>
                 
             <label>GOING TO</label>
-                <input type="text" id="Number" class="form-control" required placeholder="City or Station"><br>
+            <select class="form-control" id="To">
+                    <option value="7">Shaw Blvd.</option>
+                    <option value="7">Boni</option>      
+                    <option value="11">Guadalupe</option>   
+                    <option value="11">Buendia</option>   
+                    <option value="11">Ayala</option>  
+            </select>
+             
         </form>
     </details><br>
     </div>
 
     <div class="container2">
         <form>
-            <label>Seat</label>
-                <select class="form-select" id="seat">
-                    <option value="">1A</option>
-                    <option value="">2A</option>
-                    <option value="">3A</option>\
-                    <option value="">4S</option>
-                </select>
-            <label>Choose an option</label>
+                <label>Choose an option</label>
                 <select class="form-select" id="choose"><br>
-                    <option value="1">Regular</option>
-                    <option value="0.95">Student</option>
-                    <option value="0.80">Senior</option>
+                    <option value="1.5">Regular</option>
+                    <option value="1">Student</option>
+                    <option value="0.85">Senior</option>
                 </select>
             <label>Time</label>
-                <select class="form-select" id="choose"><br>
-                    <option value="">Regular</option>
-                    <option value="">Student</option>
-                    <option value="">Senior</option>
+                <select class="form-select" id="time"><br>
+                    <option>4AM</option>
+                    <option>12PM</option>
+                    <option>7PM</option>
                 </select><br>
 
             <button type="submit" class="btn btn-warning" onclick="bus()">Submit</button>
@@ -116,33 +112,17 @@
 
 </div>  
 <br><br>
-  <img src="https://www.sumitomocorp.com/mideast-africa/-/media/Images/hq/news/topics/2023/20230531/04-2_en.png?h=515&iar=0&w=915" style="width: 570px; border-radius: 25px; position: absolute; left: 100px;"></img>
-<div class="ticketprice">
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<p style="position: absolute; left: 100px; text-align: center;  border: solid; border-color: indianred; background-color: indianred; border-radius: 25px; font-size: 20px; color: white;">-----------------------------------------------------------------------<b><br>Ticket Price:</b><br><br>something<br>-----------------------------------------------------------------------</p>
-</div>
-
-
+  <img src="https://www.sumitomocorp.com/mideast-africa/-/media/Images/hq/news/topics/2023/20230531/04-2_en.png?h=515&iar=0&w=915" style="width: 750px; border-radius: 25px; position: absolute; left: 85px; top: 205px;"></img>
 </body>
 
     <script>
 
-//DONT mind this yet (i used my quiz for this focus on the the design first i can do the formula thingies)
-        function sub(){
-            var name = document.getElementById("name").value;
-            window.alert("Thank you " + name + "!" + " Please proceed to: Ticket Pricing")
-        }
         function bus(){
-            var seats = document.getElementById("seat").value;
-            var choose = document.getElementById("choose").value;
-            var price = Number(seats) * Number(choose)
-            window.alert("Your ticket price is: " + price +"₱." + " Please proceed to the final section")
+            var From = document.getElementById("From").value;
+            var To = document.getElementById("To").value;
+            var Age = document.getElementById("choose").value;
+            var price = Number(From) + Number(To) * Number(Age);
+            window.alert("Your ticket price is: " + price +"₱.")
         }
         function tt(){
             var email = document.getElementById("EM").value;
