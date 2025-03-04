@@ -43,10 +43,10 @@
 
     <body style="background-image:url(https://images.unsplash.com/photo-1515165562839-978bbcf18277?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
         
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
 
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Auckland_transport_train_logo.png" style="width: 40px; float: right;"></a>
+    <div class="collapse navbar-collapse">
+        <a class="navbar-brand" href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Auckland_transport_train_logo.png" style="width: 40px; float: right;"></a>
         <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" href="secondpage.html">Schedule</a>
@@ -56,7 +56,7 @@
       </li>
     </ul>
   </div>
-</nav>
+</nav><br><br>
 
 <div class="p-2 text-white text-center" style="background-color: indianred;">
   <h1>Train Tickets</h1>
@@ -122,16 +122,10 @@
             var To = document.getElementById("To").value;
             var Age = document.getElementById("choose").value;
             var price = Number(From) + Number(To) * Number(Age);
-            window.alert("Your ticket price is: " + price +"₱.")
+            window.alert("Your ticket price is: " + price +"₱. " + "Thank you For purchasing!")
         }
-        function tt(){
-            var email = document.getElementById("EM").value;
-            var name = document.getElementById("name").value;
-            window.alert("Thank you for purchasing" + name + "!" + " Your ticket was sent to your email; " + email);
-        }
-        function ty(){
-            window.alert("Please confirm what email to be sent");
-        }
+       
+     
 
 
     
